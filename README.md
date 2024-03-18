@@ -87,7 +87,7 @@ Start the server
 
 ## Deployment
 
-To deploy this project run
+Deployed on
 
   [@Heroku](https://face-swap-app-2de2a4bd6261.herokuapp.com/)
 
