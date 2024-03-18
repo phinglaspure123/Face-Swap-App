@@ -90,7 +90,7 @@ Start the server
 To deploy this project run
 
 ```bash
-  [Heroku](https://face-swap-app-2de2a4bd6261.herokuapp.com/)
+  [@Heroku](https://face-swap-app-2de2a4bd6261.herokuapp.com/)
 ```
 
 ## Authors
