@@ -58,13 +58,15 @@ def clear_folder(folder):
 
 
 def main():
+    st.title("Face Swapping Tool")
     
     clear_folder(UPLOADS_FOLDER)
     clear_folder(CROPPED_FOLDER)
     
     create_folder_if_not_exist(UPLOADS_FOLDER)
     create_folder_if_not_exist(CROPPED_FOLDER)
-
+    
+    
     st.sidebar.title("Upload Images")
     uploaded_image1 = st.sidebar.file_uploader("Upload Base Image", type=["jpg", "jpeg", "png"])
     uploaded_image2 = st.sidebar.file_uploader("Upload Mask Image", type=["jpg", "jpeg", "png"])
@@ -85,7 +87,7 @@ def main():
         pil_image1 = fix_orientation(pil_image1)
         pil_image2 = fix_orientation(pil_image2)
 
-        st.title("Face Swapping Tool")
+        
         col1, col2,col3 = st.columns(3)
         with col1:
             st.text("Cropped Base Image:")
@@ -110,7 +112,9 @@ def main():
                     y = check_and_convert_orientation_conv_gray(cropped_image2_path)
                     st.image(swap(x, y))
                 except Exception as e:
-                    st.error(f"Selection wrong please selection face (head to chin)")
+                    st.error(f"Selection wrong please select face (head to chin)")\
+    
+        st.write("** Output Changes with respect to the cropping of images")
 
     
 
